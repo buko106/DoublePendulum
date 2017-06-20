@@ -46,7 +46,7 @@ def f(x):
 result = []
 times  = []
 x = np.array([args.t1,args.dt1,args.t2,args.dt2])
-for i in xrange(n):
+for i in range(n):
     t = h * i
     times  += [t]
     result += [x]
@@ -76,7 +76,7 @@ fig = plt.figure()
 plt.axes(xlim=(-l,+l),ylim=(-l,+l))
 plt.gca().set_aspect('equal', adjustable='box')
 
-for i in xrange(0,n,args.sampling):
+for i in range(0,n,args.sampling):
     im = []
     if not args.without_line:
         im += plt.plot(xy[0,:i],xy[1,:i],"-",lw=0.5,color="blue")
